@@ -1,0 +1,47 @@
+#include<iostream.h>
+#include<string.h>
+class Phanso{
+		private:
+			int t,m;
+		public:
+			Phanso(){}
+			~Phanso(){};
+		void set(){
+			cin.ignore();
+			cout<<"\nNhap tu so:";
+			cin>>t;
+			cout<<"\nNhap mau so:";
+			cin>>m;
+		}
+		void get(){
+			cout << t << "/" << m;
+		}
+		int gett(){
+			return t;
+		}
+		
+		int getm(){
+			return m;
+		}
+};
+int main(){
+	Phanso ps [2];
+	for(int i=1 ; i<=2 ; i++)
+	{
+		cout<<"\nNhap vao phan so thu "<< i <<":"<<endl;
+		ps[i].set();
+	}
+		for(int i=1 ; i<=2 ; i++)
+	{
+		cout<<"\nxuat ra phan so thu "<< i <<":";
+		ps[i].get();
+	}
+	
+	cout<<"\nTong phan so thu 1:";
+	    ps[i].gett();
+    cout<<" va phan so thu 2 : ";
+        ps[i].getm();
+    cout<<"la:";
+    /
+    
+}

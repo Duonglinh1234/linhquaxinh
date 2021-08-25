@@ -1,0 +1,54 @@
+#include<iostream.h>
+#include<string.h>
+class Sanpham{
+	private:
+		char masp[10];
+		char tensp[20];
+		int loaisp;
+		float dongia;
+	public:
+	    Sanpham(){}
+	    	Sanpham(char * masp , char * tensp , int loaisp , float dongia){
+	    		strcpy (this -> masp, masp);
+	    		strcpy (this -> tensp, tensp);
+	    		        this -> loaisp = loaisp;
+	    		        this -> dongia = dongia;
+	    	}
+	    	~ Sanpham(){};
+	    	
+	    	void set(){
+	    		cin.ignore();
+	    		cout<<"\nNhap ma san pham :";
+	    		cin.getline(masp,10);
+	    		cout<<"\nNhap ten san pham :";
+	    		cin.getline(tensp,20);
+	    		cout<<"\nNhap loai san pham :";
+	    		cin>>loaisp;
+	    		cout<<"\nNhap don gia:";
+	    		cin>>dongia;
+	    	}
+	    	void get(){
+	    		cout<<"\nMa san pham :"<<masp;	    	
+	    		cout<<"\nTen san pham :"<<tensp;	    	
+	    		cout<<"\nLoai san pham :"<<loaisp;	    	
+	    		cout<<"\nDon gia:"<<dongia<<endl;	    	
+	    	}	
+};
+main(){	
+    int n;
+    cout<<"\nNhap so san pham:";
+    cin>>n;
+    Sanpham * sp = new Sanpham[n];
+	cout<<"****Nhap thong tin san pham****"<<endl;
+	for(int i=0 ; i<n ; i++)
+	{
+		cout<<"\nSan pham thu "<<i+1<<":";
+		sp[i].set();
+	}
+	cout<<"****Xuat thong tin san pham****";
+	for(int i=0 ; i<n ; i++)
+	{
+		cout<<"\nSan pham thu "<<i+1<<":";
+		sp[i].get();
+	}
+}
